@@ -1,5 +1,33 @@
 'use strict';
 
 module.exports = function countSameElements(collection) {
-  return '实现练习要求，并改写该行代码。';
-}
+    var res=[{}];
+    res[0].key=collection[0];
+    res[0].count=1;
+     
+    for (var i = 1;i<collection.length;i++)
+    {
+        if(collection[i] == res[0].key)
+        {
+            res[0].count++;
+        }
+       else if(collection[i] == collection[i-1]);
+       else
+       {
+           var obj={};
+           obj.key=collection[i];
+           obj.count=1;
+           for(var j = i+1;j<collection.length;j++)
+           {
+               if (collection[j] == collection[i])
+               {
+                   obj.count++;
+               }
+           }
+           res.push(obj);
+       }
+           
+    }
+    
+  return res;
+ }
