@@ -1,13 +1,14 @@
 'use strict';
 
 module.exports = function countSameElements(collection) {
+    //Create an array for saving the requested result
     var res=[{}];
     res[0].key=collection[0];
-    res[0].count=1;
+    res[0].count=1;//Save the first element of given collection in the array res in the required format
      
     for (var i = 1;i<collection.length;i++)
     {
-        if(collection[i] == res[0].key)
+        if(collection[i] == res[0].key)//
         {
             res[0].count++;
         }
