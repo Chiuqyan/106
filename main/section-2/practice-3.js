@@ -3,7 +3,7 @@
 module.exports = function countSameElements(collection) {
     var result = new Array();
     var num_of_letter;
-    var letter_count=['0','1','2','3','4','5','6','7','8','9'];
+    var letter_count=['0','1','2','3','4','5','6','7','8','9','10'];
     var tag=false;
     for (var i in collection) {
         tag=false;
