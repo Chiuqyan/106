@@ -6,7 +6,7 @@ module.exports = function countSameElements(collection) {
     res[0].key=collection[0];
     res[0].count=1;//Save the first element of given collection in the array res in the required format
      
-    for (var i = 1;i<collection.length;i++)
+    for (let i in collection)
     {
         if(collection[i] == res[0].key)//
         {
@@ -18,7 +18,7 @@ module.exports = function countSameElements(collection) {
            var obj={};
            obj.key=collection[i];
            obj.count=1;
-           for(var j = i+1;j<collection.length;j++)
+           for(let j in collection)
            {
                if (collection[j] == collection[i])
                {
